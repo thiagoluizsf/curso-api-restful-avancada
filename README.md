@@ -1,1 +1,1 @@
-# curso-api-restful-avancada
+# ponto-inteligente-api
