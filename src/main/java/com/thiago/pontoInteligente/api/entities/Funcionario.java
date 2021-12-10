@@ -13,6 +13,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -53,7 +54,7 @@ public class Funcionario {
 	@Column(name = "dataAtualizacao")
 	private Date dataAtualizacao;
 	@ManyToOne
-	@Column(name = "id_empresa")
+	@JoinColumn(name = "id_empresa")
 	private Empresa empresa;
 	@OneToMany(mappedBy = "funcionario", cascade = CascadeType.ALL)
 	private List<Lancamento> lancamentos;

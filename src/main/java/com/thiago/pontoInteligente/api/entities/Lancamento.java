@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -45,7 +46,7 @@ public class Lancamento {
 	@Column(name = "tipo")
 	private TipoEnum tipo;
 	@ManyToOne
-	@Column(name = "id_funcionario")
+	@JoinColumn(name = "id_funcionario")
 	private Funcionario funcionario;
 	
 }
